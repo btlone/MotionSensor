@@ -1,0 +1,35 @@
+﻿<Page x:Class="MotionSensor.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="using:MotionSensor"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      >
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock x:Name="GpioStatus"
+                       Margin="10,30,10,10"
+                       FontSize="26.667"
+                       Text="Waiting to initialize GPIO..."
+                       TextAlignment="Center"
+                       />
+
+            <TextBlock x:Name="PIRStatus"
+                       Margin="10,30,10,10"
+                       FontSize="26.667"
+                       Text="PIR status shown here"
+                       TextAlignment="Center"
+                       />
+
+            <TextBlock x:Name="AppStatus"
+                       Margin="10,30,10,10"
+                       FontSize="26.667"
+                       Text="Upload status shown here"
+                       TextAlignment="Center"
+                       />
+        </StackPanel>
+    </Grid>
+</Page>
+

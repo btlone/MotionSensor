@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Quiet bdfa Maker</title>
+</head>
+<body>
+    <style>
+        .container {
+            width: 400px;
+            margin: auto;
+        }
+
+            .container .switch {
+                float: left;
+                margin-right: 33px;
+            }
+
+            .container .header {
+                width: 400px;
+                margin: auto;
+            }
+
+                .container .header p {
+                    width: 165px;
+                    font-weight: 900;
+                    margin: auto;
+                    padding-bottom: 35px;
+                }
+
+        .onoffswitch {
+            position: relative;
+            width: 90px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .onoffswitch-checkbox {
+            display: none;
+        }
+
+        .onoffswitch-label {
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid #89D637;
+            border-radius: 20px;
+        }
+
+        .onoffswitch-inner {
+            display: block;
+            width: 200%;
+            margin-left: -100%;
+            transition: margin 0.3s ease-in 0s;
+        }
+
+            .onoffswitch-inner:before, .onoffswitch-inner:after {
+                display: block;
+                float: left;
+                width: 50%;
+                height: 30px;
+                padding: 0;
+                line-height: 30px;
+                font-size: 14px;
+                color: white;
+                font-family: Trebuchet, Arial, sans-serif;
+                font-weight: bold;
+                box-sizing: border-box;
+            }
+
+            .onoffswitch-inner:before {
+                content: "ON";
+                padding-left: 10px;
+                background-color: #B5EB7F;
+                color: #FFFFFF;
+            }
+
+            .onoffswitch-inner:after {
+                content: "OFF";
+                padding-right: 10px;
+                background-color: #EEEEEE;
+                color: #999999;
+                text-align: right;
+            }
+
+        .onoffswitch-switch {
+            display: block;
+            width: 22px;
+            margin: 6px;
+            background: #89D637;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 56px;
+            border: 2px solid #89D637;
+            border-radius: 20px;
+            transition: all 0.3s ease-in 0s;
+        }
+
+        .onoffswitch-checkbox:checked .onoffswitch-label .onoffswitch-inner {
+            margin-left: 0;
+        }
+
+        .onoffswitch-checkbox:checked .onoffswitch-label .onoffswitch-switch {
+            right: 0px;
+            background-color: #FFFFFF;
+        }
+
+        .onoffswitchRed {
+            position: relative;
+            width: 90px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .onoffswitchRed-checkbox {
+            display: none;
+        }
+
+        .onoffswitchRed-label {
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid #D63737;
+            border-radius: 20px;
+        }
+
+        .onoffswitchRed-inner {
+            display: block;
+            width: 200%;
+            margin-left: -100%;
+            transition: margin 0.3s ease-in 0s;
+        }
+
+            .onoffswitchRed-inner:before, .onoffswitchRed-inner:after {
+                display: block;
+                float: left;
+                width: 50%;
+                height: 30px;
+                padding: 0;
+                line-height: 30px;
+                font-size: 14px;
+                color: white;
+                font-family: Trebuchet, Arial, sans-serif;
+                font-weight: bold;
+                box-sizing: border-box;
+            }
+
+            .onoffswitchRed-inner:before {
+                content: "ON";
+                padding-left: 10px;
+                background-color: #F79797;
+                color: #FFFFFF;
+            }
+
+            .onoffswitchRed-inner:after {
+                content: "OFF";
+                padding-right: 10px;
+                background-color: #EEEEEE;
+                color: #999999;
+                text-align: right;
+            }
+
+        .onoffswitchRed-switch {
+            display: block;
+            width: 22px;
+            margin: 6px;
+            background: #D63737;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 56px;
+            border: 2px solid #D63737;
+            border-radius: 20px;
+            transition: all 0.3s ease-in 0s;
+        }
+
+        .onoffswitchRed-checkbox:checked .onoffswitchRed-label .onoffswitchRed-inner {
+            margin-left: 0;
+        }
+
+        .onoffswitchRed-checkbox:checked .onoffswitchRed-label .onoffswitchRed-switch {
+            right: 0px;
+            background-color: #FFFFFF;
+        }
+
+        .onoffswitchYellow {
+            position: relative;
+            width: 90px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .onoffswitchYellow-checkbox {
+            display: none;
+        }
+
+        .onoffswitchYellow-label {
+            display: block;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid #D6BE37;
+            border-radius: 20px;
+        }
+
+        .onoffswitchYellow-inner {
+            display: block;
+            width: 200%;
+            margin-left: -100%;
+            transition: margin 0.3s ease-in 0s;
+        }
+
+            .onoffswitchYellow-inner:before, .onoffswitchYellow-inner:after {
+                display: block;
+                float: left;
+                width: 50%;
+                height: 30px;
+                padding: 0;
+                line-height: 30px;
+                font-size: 14px;
+                color: white;
+                font-family: Trebuchet, Arial, sans-serif;
+                font-weight: bold;
+                box-sizing: border-box;
+            }
+
+            .onoffswitchYellow-inner:before {
+                content: "ON";
+                padding-left: 10px;
+                background-color: #FAEB99;
+                color: #FFFFFF;
+            }
+
+            .onoffswitchYellow-inner:after {
+                content: "OFF";
+                padding-right: 10px;
+                background-color: #EEEEEE;
+                color: #999999;
+                text-align: right;
+            }
+
+        .onoffswitchYellow-switch {
+            display: block;
+            width: 22px;
+            margin: 6px;
+            background: #D6BE37;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 56px;
+            border: 2px solid #D6BE37;
+            border-radius: 20px;
+            transition: all 0.3s ease-in 0s;
+        }
+
+        .onoffswitchYellow-checkbox:checked .onoffswitchYellow-label .onoffswitchYellow-inner {
+            margin-left: 0;
+        }
+
+        .onoffswitchYellow-checkbox:checked .onoffswitchYellow-label .onoffswitchYellow-switch {
+            right: 0px;
+            background-color: #FFFFFF;
+        }
+    </style> <div class="container"> <div class="header"> <p>Disco party :)</p> </div> <form action="quietmaker.html" method="GET" id="myForm"> <input id="formSubmitInput" type="hidden" name="state" value="reseton" /> </form> <div class="switch"> <div class="onoffswitch"> <input type="radio" value="greenon" class="onoffswitch-checkbox" id="myonoffswitch" onclick="processForm(this)" {0}> <label class="onoffswitch-label" for="myonoffswitch"> <span class="onoffswitch-inner"></span> <span class="onoffswitch-switch"></span> </label> </div> </div> <div class="switch"> <div class="onoffswitchRed"> <input type="radio" value="redon" class="onoffswitchRed-checkbox" id="myonoffswitchRed" onclick="processForm(this)" {1}> <label class="onoffswitchRed-label" for="myonoffswitchRed"> <span class="onoffswitchRed-inner"></span> <span class="onoffswitchRed-switch"></span> </label> </div> </div> <div class="switch"> <div class="onoffswitchYellow"> <input type="radio" value="yellowon" class="onoffswitchYellow-checkbox" id="myonoffswitchYellow" onclick="processForm(this)" {2}> <label class="onoffswitchYellow-label" for="myonoffswitchYellow"> <span class="onoffswitchYellow-inner"></span> <span class="onoffswitchYellow-switch"></span> </label> </div> </div> </div>
+    <script type="text/javascript"> window.lastChecked = null; function processForm(input) { var form = document.getElementById("myForm"); var formInput = document.getElementById("formSubmitInput"); if (window.lastChecked == input.id) { window.lastChecked = null; resetInput(input, formInput); } else { if (window.lastChecked != null) { var previousInput = document.getElementById(window.lastChecked); previousInput.checked = false; } window.lastChecked = input.id; formInput.value = input.value; } form.submit(); } function resetInput(input, formInput) { input.checked = false; formInput.value = "reseton"; } </script>
+</body>
+</html>
+
+<html>
+<head>
+    <title>Quiet asdf Maker</title>
+</head>
+<body>
+    <form action="quietmaker.html" method="GET"><input type="radio" name="state" value="redon" id="idred" onclick="this.form.submit()"><label for="idred" /> Red</form><form action="quietmaker.html" method="GET"><input type="radio" name="state" value="yellowon" id="idyellow" onclick="this.form.submit()"><label for="idyellow" /> Yellow</form><form action="quietmaker.html" method="GET"><input type="radio" name="state" value="greenon" id="idgreen" onclick="this.form.submit()"><label for="idgreen" /> Green</form><br><br><form action="quietmaker.html" method="GET"><input type="radio" name="state" value="reseton" id="idreset" onclick="this.form.submit()"><label for="idreset" /> Reset</form>
+</body>
+</html>
